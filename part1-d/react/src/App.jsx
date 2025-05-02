@@ -68,6 +68,8 @@ function App() {
     console.log(arr)
 
   }
+  const freqStats = maxNum(countStringFrequencies(arr))
+
   return (
     <>
       {click.left}
@@ -81,7 +83,7 @@ function App() {
       <p>{click.allClick.join('')}</p>
       <p>{anecdotes[selected]}</p>
       <button onClick={onClik}>next anecdotes</button>
-      <p>出现最多的是：{maxNum(countStringFrequencies(arr)).maxKey}出现的次数是 {maxNum(countStringFrequencies(arr)).maxValue}</p>
+      <p>出现最多的是：{freqStats.maxKey}出现的次数是 {freqStats.maxValue}</p>
     </>
   )
 }
